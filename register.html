@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>TECHIETIDE | REGISTER</title>
+	 <link rel="stylesheet"
+	 href="static/css/register.css" >
+	  
+</head>
+<body>
+	<div class="register">
+		<h2><centre>Register Form</center></h2>
+			<form action="/register" method="post"><br></br>
+
+			<div class="msg">{{ msg }}</div>
+				<br></br>
+				<input type="text" name="username" placeholder="Enter Your Username"  id="username" required></br></br>
+			    <input type="email" name="email" placeholder="Enter Your Email ID"  id="email" required></br></br>
+			    <input type="password" name="password" placeholder="Enter Your Password" id="password" required></br></br></br></br>
+			    <button type="submit" id="button" class="btn btn-primary"> <center> Register</center> </button>
+ 
+			</form><br></br>
+			<div class="note mt-3 text-center"> 
+				<p><center><footer> already have an account ? please login  <a href="/login">login! </a> </footer></center></p>
+			</div>
+			</div>
+	</div>
+</body>
+</html>
+		
+		
+

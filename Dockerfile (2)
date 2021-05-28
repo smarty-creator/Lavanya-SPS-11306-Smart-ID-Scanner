@@ -1,0 +1,15 @@
+FROM ubuntu:18.04
+
+
+RUN apt-get update && apt-get install -y software-properties-common && add-apt-repository -y ppa:alex-p/tesseract-ocr
+RUN apt install libtesseract-dev libleptonica-dev liblept5 tesseract -v
+COPY . /app
+WORKDIR /app
+
+RUN  pip install pytesseract
+RUN pip install pillow
+RUN pip install opencv-contrib-python
+RUN pip install -r requirements.txt
+ENTRYPOINT ["python"]
+CMD ["app.py"]
+
